@@ -1,0 +1,20 @@
+.intro{
+    color: yellow;
+    font-size: 30px;
+    font-weight: bold;
+    background:grey;
+    width:30%;
+}
+h2{
+   color: green;
+   font-size: 20 px; 
+}
+p{
+    font-size:18 px;
+}
+a{
+    color: green;
+}
+li{
+    font- size: 20px;
+}
