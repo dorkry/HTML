@@ -1,13 +1,13 @@
 <!DOCTYPE HTML>
 <html lang= "pl">
     <head>
-        {% extends "index.html" %}
-        {% block head %}
-        {% endblock %}
+        <meta charset = "utf-8">
+        <title>Moja pierwsza strona</title>
+        <link rel = "stylesheet" href = "{{url_for('static', filename = 'style.css')}}">
     </head>
     <body>
-        {% block intro %}
-        {% endblock %}
+        <h1 class = "intro">Witaj na mojej stronie</h1>
+        <img src = "{{url_for('static', filename = 'avatar.jpg')}}" alt = "mój avatar" title = "ja"></img>
         <h2>Kontakt:</h2>
         <h3>Wyślij wiadomość:</h3>
         <ul>
@@ -18,7 +18,7 @@
         <textarea rows = "4" cols = "50">
         </textarea>
         <input type= "submit">
-    <h2><a href = "./index.html">Powrót </a></h2>
+    <h2><a href = "./">Powrót </a></h2>
     </form>
     </body>
 </html>
