@@ -12,5 +12,5 @@ def kontakt():
 
 @app.route('/kontakt', methods=['POST'])
 def form():
-    print(request.form)
+    print(request.form.get("msg"))
     return redirect("/kontakt")
