@@ -1,5 +1,5 @@
-import csv
-from flask import Flask, render_template, request, redirect
+import csv, flask_wtf
+from flask import Flask, render_template, request, redirect, jsonify
 
 heading = ["author", "title", "format", "descr"]
 
@@ -86,7 +86,10 @@ def delete_out():
         message = "Nie znalezono pasujących elementów"
     return render_template("delete.html", msg = message)
 
-    
 @app.route('/all', methods=['GET'])
 def show_all():
     return render_template("all.html", result = base)
+
+@app.route('/api/books', methods = ['GET'])
+def get_books():
+    return jsonify(base)
