@@ -1,0 +1,36 @@
+{% extends "index.html" %}
+{% block content %}
+<p>
+    <form action = "" method = "POST">
+        <select name = "option">
+            <option>author</option>
+            <option>title</option>
+            <option>format</option>
+        </select><br>
+        wpisz <input type = "text" id = "value" name = "value">
+       <input type = "submit" value = "szukaj">
+    </form>
+</p>
+<div>
+    {% if result %}
+    <table>
+        {% for i in result %}
+        <tr>
+            <td>
+                {{i["author"]}}, 
+            </td>
+            <td>
+                {{i["title"]}}
+            </td>
+            <td>
+                {{i["format"]}}
+            </td>
+            <td>
+                {{i["descr"]}}
+            </td>
+        </tr>
+    {% endfor %}
+    </table>
+    {% endif %}
+</div>
+{% endblock %}

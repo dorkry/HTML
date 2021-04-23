@@ -1,0 +1,27 @@
+{% extends "index.html" %}
+{% block content %}
+
+<div>
+    {% if result %}
+    <table>
+        {% for i in result %}
+        <tr>
+            <td>
+                {{i["author"]}}, 
+            </td>
+            <td>
+                {{i["title"]}}
+            </td>
+            <td>
+                {{i["format"]}}
+            </td>
+            <td>
+                {{i["descr"]}}
+            </td>
+        </tr>
+    {% endfor %}
+    </table>
+    {% endif %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% block content %}
+<p>
+    <form action = "" method = "POST">
+        Autor: <input type = "text" id = "author" name = "author"><br>
+        Tytuł: <input type = "text" id = "title" name = "title"><br>
+        Format: <select name = "format" id="format">
+                    <option>EPUB</option>
+                    <option>MOBI</option>
+                    <option>PDF</option>
+                </select><br>
+        Opis: <textarea name = "descr" rows = "4" cols = "50"></textarea><br>
+        <!--Okładka: <input type = "file" name = "cover">-->
+        <input type = "submit" value = "dodaj">
+    </form>
+</p>
+{% endblock %}

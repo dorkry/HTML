@@ -1,0 +1,13 @@
+.intro{
+    color: yellow;
+    font-size: 30px;
+    font-weight: bold;
+    background:grey;
+    width:30%;
+}
+.menu{
+    color: red;
+    font-size: 20px;
+    width: 600px;
+    border-width:2px;
+}

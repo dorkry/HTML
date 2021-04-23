@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+{% block content %}
+<p>
+    <form action = "" method = "POST">
+        Autor: <input type = "text" id = "author" name = "author"><br>
+        Tytuł: <input type = "text" id = "title" name = "title"><br>
+        <input type = "submit" value = "usuń">
+    </form>
+</p>
+    {% if msg %}
+        {{msg}}
+    {% endif %}
+{% endblock %}
