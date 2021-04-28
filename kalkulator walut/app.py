@@ -23,9 +23,12 @@ def form():
             for i in data[0]["rates"]:
                 if i["code"] == currency:
                     res = amount * i["bid"]
+                    break
     except:
         res = -1
     return render_template("index.html", items = code_list, result = res)
+
+
 
 
 
