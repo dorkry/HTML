@@ -4,7 +4,7 @@ def get_nbp():
     response = requests.get("http://api.nbp.pl/api/exchangerates/tables/C?format=json")
     data = response.json()
     heading = ["currency", "code", "bid", "ask"]
-    with open("C:\\Users\\Administrator\\Desktop\\Kodilla\\HTML\\kalkulator walut\\table.csv", "w") as file:
+    with open("table.csv", "w") as file:
         w = csv.DictWriter(file, fieldnames = heading)
         w.writeheader()
         for i in data[0]["rates"]:
